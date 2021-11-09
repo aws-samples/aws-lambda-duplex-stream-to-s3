@@ -1,7 +1,7 @@
 {
   "name": "lambda",
   "version": "1.0.0",
-  "description": "Handler for downloading a large file and upoading it to S3 using streams",
+  "description": "Handler for downloading a large file and uploading it to S3 using streams",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
