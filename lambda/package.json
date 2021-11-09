@@ -1,0 +1,18 @@
+{
+  "name": "lambda",
+  "version": "1.0.0",
+  "description": "Handler for downloading a large file and upoading it to S3 using streams",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Ryan Sonshine",
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.40.0",
+    "@aws-sdk/lib-storage": "^3.40.0",
+    "aws-sdk": "^2.1023.0"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.85"
+  }
+}

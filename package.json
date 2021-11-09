@@ -1,0 +1,25 @@
+{
+  "name": "aws-lambda-duplex-stream-to-s3",
+  "version": "0.1.0",
+  "bin": {
+    "aws-lambda-duplex-stream-to-s3": "bin/aws-lambda-duplex-stream-to-s3.js"
+  },
+  "scripts": {
+    "cdk": "cdk",
+    "prebuild": "npm install && npm install --prefix ./lambda",
+    "build": "CDK_NEW_BOOTSTRAP=1 cdk synth",
+    "deploy": "cdk deploy",
+    "destroy": "cdk destroy"
+  },
+  "devDependencies": {
+    "@types/node": "10.17.27",
+    "aws-cdk": "2.0.0-rc.24",
+    "ts-node": "^9.0.0",
+    "typescript": "~3.9.7"
+  },
+  "dependencies": {
+    "aws-cdk-lib": "2.0.0-rc.24",
+    "constructs": "^10.0.0",
+    "source-map-support": "^0.5.16"
+  }
+}
