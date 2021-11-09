@@ -16,6 +16,14 @@ By using an approach with streams, the lambda memory configuration is no longer
 a constraint, allowing us to process files of any size as long as the transfer
 can occur within the maximum execution time (15 minutes).
 
+## Prerequisites
+
+To deploy this CDK application, you will need the following:
+
+- [Node.js](https://nodejs.org/en/download/) v10 or later (LTS only)
+- Docker (for building the lambda function)
+- An AWS profile configured with valid IAM credentials
+
 ## Usage
 
 Deploy the CDK stack by cloning this repository then running:
