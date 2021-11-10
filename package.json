@@ -7,7 +7,7 @@
   "scripts": {
     "cdk": "cdk",
     "prebuild": "npm install && npm install --prefix ./lambda",
-    "build": "CDK_NEW_BOOTSTRAP=1 cdk synth",
+    "build": "CDK_NEW_BOOTSTRAP=1 cdk bootstrap && cdk synth",
     "deploy": "cdk deploy",
     "destroy": "cdk destroy"
   },
