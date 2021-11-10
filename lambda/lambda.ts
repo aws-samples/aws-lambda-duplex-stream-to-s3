@@ -3,11 +3,11 @@
  * SPDX-License-Identifier: MIT-0
  */
 
-import * as https from "https";
-import * as path from "path";
-import * as stream from "stream";
-import { Upload } from "@aws-sdk/lib-storage";
-import { S3Client } from "@aws-sdk/client-s3";
+import * as https from 'https';
+import * as path from 'path';
+import * as stream from 'stream';
+import { Upload } from '@aws-sdk/lib-storage';
+import { S3Client } from '@aws-sdk/client-s3';
 
 interface CustomLambdaEvent {
   url: string;
@@ -29,7 +29,7 @@ const createUploadStream = (
     },
   });
 
-  parallelUploadS3.on("httpUploadProgress", (progress) => {
+  parallelUploadS3.on('httpUploadProgress', (progress) => {
     console.log(`Uploaded part: ${progress.part}`);
   });
 
@@ -37,7 +37,7 @@ const createUploadStream = (
 };
 
 export const handler = async (event: CustomLambdaEvent): Promise<void> => {
-  console.log("Processing event: ", JSON.stringify(event, null, 2));
+  console.log('Processing event: ', JSON.stringify(event, null, 2));
   try {
     const { parallelUploadS3, passStream } = createUploadStream(event.url);
 
@@ -50,7 +50,7 @@ export const handler = async (event: CustomLambdaEvent): Promise<void> => {
     });
 
     await parallelUploadS3.done();
-    console.log("Done");
+    console.log('Done');
   } catch (e) {
     console.log(e);
     throw e;
