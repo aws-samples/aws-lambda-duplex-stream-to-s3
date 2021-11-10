@@ -18,7 +18,7 @@ const createUploadStream = (
 ): { passStream: stream.PassThrough; parallelUploadS3: Upload } => {
   const passStream = new stream.PassThrough();
   const extension = path.extname(url);
-  const uploadKeyName = `Upload-${new Date().toISOString()}.${extension}`;
+  const uploadKeyName = `Upload-${new Date().toISOString()}${extension}`;
   const parallelUploadS3 = new Upload({
     client: new S3Client({}),
     queueSize: 4,
