@@ -22,7 +22,7 @@ To deploy this CDK application, you will need the following:
 
 - [Node.js](https://nodejs.org/en/download/) v10 or later (LTS only)
 - Docker (for building the lambda function)
-- An AWS profile configured with valid IAM credentials
+- An AWS profile with valid IAM credentials
 
 ## Usage
 
@@ -44,6 +44,10 @@ data to S3.
 
 Open the [S3 Console](https://s3.console.aws.amazon.com/s3/home?region=us-east-1)
 when the lambda has completed to see the file has been uploaded to your bucket.
+
+**Note**: If you need to specify an AWS profile other than `default` to use,
+set the `AWS_DEFAULT_PROFILE` environment variable in your shell before running
+any commands.
 
 ## Cleaning Up
 
