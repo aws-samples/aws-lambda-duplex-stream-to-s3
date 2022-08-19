@@ -7,6 +7,7 @@ import {
   aws_lambda_nodejs as lambda,
   aws_s3 as s3,
   Duration,
+  RemovalPolicy,
   Stack,
   StackProps,
 } from 'aws-cdk-lib';
@@ -16,7 +17,10 @@ export class AwsLambdaDuplexStreamToS3Stack extends Stack {
   constructor(scope: Construct, id: string, props?: StackProps) {
     super(scope, id, props);
 
-    const uploadBucket = new s3.Bucket(this, 'UploadBucket', {});
+    const uploadBucket = new s3.Bucket(this, 'UploadBucket', {
+      removalPolicy: RemovalPolicy.DESTROY,
+      autoDeleteObjects: true,
+    });
 
     const streamLambda = new lambda.NodejsFunction(this, 'LambdaFunction', {
       functionName: 'duplex-stream-to-s3',
