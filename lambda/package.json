@@ -10,7 +10,7 @@
   "dependencies": {
     "@aws-sdk/client-s3": "^3.40.0",
     "@aws-sdk/lib-storage": "^3.40.0",
-    "aws-sdk": "^2.1023.0"
+    "aws-sdk": "^2.1354.0"
   },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.85"
